@@ -38,4 +38,7 @@ you can use "git commit -amend" to update, or rectify, your last commit. For exa
 however, if your last commit was already pushed to the remote repo, after the amend it will appear as if your local copy and the remote have diverged by one commit each; you must then fetch + merge the data from the remote, witch will create a "merge commit" with the two parrents as you original commit before the amend and the commit after the amend; pushing this back to remote will get you back to a clean "git status"
 (this is what happened with commits 3 - 4 - 5 on this repository)]
 
+* conflicts when merging - committed changes
 
+if you have committed changes that have not been pushed upstream, and you try to fetch and merge changes that interfere you might need to resolve the conflict
+a merge commit will be created and added to the history, which you will then need to push upstream in order to bring your local copy and the remote in sync (with your aforementioned changes included)
