@@ -53,4 +53,8 @@ if you want to see what happend on the remote branch, effectively, what has been
 	"git diff HEAD...origin"
 notice the triple dot in the last command; that tells to show the diff between the common ancestor commit of the two branches and the latest commit on origin; this can also be simply "git diff ...origin/master"; take care that "git diff HEAD..origin/master" shows you what is different between the working copy head and the remote one, so both changes are included in the diff
 
+* how to view the commit log in a nice graphic-like format
+
+oneliner for a nice view of the history: "git log --oneline --graph --all --decorate"
+(note: after feeling comftarble with all these commands you can create git aliases for them)
 
