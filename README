@@ -32,4 +32,8 @@ discarding your uncommitted is done as suggested via "git status": "git checkout
 now if you run "git merge" the remote changes will be merged to your working copy
 in the simple case where you have no divergin changes, you working copy will be "fast-forwarded" to the latest data (in effect, there was no merge, your working copy was just updated)
 
+* how to view the commit log in a nice graphic-like format
+
+oneliner for a nice view of the history: "git log --oneline --graph --all --decorate"
+(note: after feeling comftarble with all these commands you can create git aliases for them)
 
