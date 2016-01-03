@@ -32,4 +32,10 @@ discarding your uncommitted is done as suggested via "git status": "git checkout
 now if you run "git merge" the remote changes will be merged to your working copy
 in the simple case where you have no divergin changes, you working copy will be "fast-forwarded" to the latest data (in effect, there was no merge, your working copy was just updated)
 
+[* sidetrack: git commit -amend + git push
+
+you can use "git commit -amend" to update, or rectify, your last commit. For example, you can change the commit message.
+however, if your last commit was already pushed to the remote repo, after the amend it will appear as if your local copy and the remote have diverged by one commit each; you must then fetch + merge the data from the remote, witch will create a "merge commit" with the two parrents as you original commit before the amend and the commit after the amend; pushing this back to remote will get you back to a clean "git status"
+(this is what happened with commits 3 - 4 - 5 on this repository)]
+
 
