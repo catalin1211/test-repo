@@ -1,4 +1,21 @@
 This is a test repository for setting up github.
-
 Nothing interesting will happen here.
+
+Points to follow
+
+* how to commit something locally
+
+modify a file or create a new one
+add it to staged area with "git add"
+use "git commit" to commit it - !locally
+
+* how to push the commit to remote repository
+
+set up the remote repository using "git remote add origin https://github.com/catalin1211/test-repo"
+this is just a link between you local repository and the remote one
+can be seen with "git remote [-v]"; also "git remote show origin"
+the name of the remote repository is now "origin"
+
+"git push origin master" will push your commits to the remote repository
+
 
