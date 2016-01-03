@@ -18,4 +18,18 @@ the name of the remote repository is now "origin"
 
 "git push origin master" will push your commits to the remote repository
 
+* how to update your local copy
+
+get the latest remote info via "git fetch"
+that does not modify you working copy
+see the differences between what you have and what is on the server with "git diff origin/master" (or "git diff ..origin/master" which I think takes into account only your committed work, not your changes as well)
+after "git fetch" you can merge the new data into your working copy with "git merge"
+
+* conflicts when merging - uncommitted changes
+
+if you have uncommitted changes before merging you will get an error message saying that you must either dicard or commit your changes (or stash them, but that's too advanced for me right now)
+discarding your uncommitted is done as suggested via "git status": "git checkout -- <file>" (<file> can be a path as well, ex: ".", the current path)
+now if you run "git merge" the remote changes will be merged to your working copy
+in the simple case where you have no divergin changes, you working copy will be "fast-forwarded" to the latest data (in effect, there was no merge, your working copy was just updated)
+
 
