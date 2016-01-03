@@ -42,3 +42,15 @@ however, if your last commit was already pushed to the remote repo, after the am
 
 if you have committed changes that have not been pushed upstream, and you try to fetch and merge changes that interfere you might need to resolve the conflict
 a merge commit will be created and added to the history, which you will then need to push upstream in order to bring your local copy and the remote in sync (with your aforementioned changes included)
+
+* how to see incoming changes from remote
+
+doing a "git fetch" will get the latest data from your remotes
+it is very important to know that fetching will not touch your local branches
+if you want to see what happend on the remote branch, effectively, what has been modified since your last merge or pull you can use these commands:
+	"git log -p HEAD..origin/master"
+	"git log --name-status HEAD..origin/master"
+	"git diff HEAD...origin"
+notice the triple dot in the last command; that tells to show the diff between the common ancestor commit of the two branches and the latest commit on origin; this can also be simply "git diff ...origin/master"; take care that "git diff HEAD..origin/master" shows you what is different between the working copy head and the remote one, so both changes are included in the diff
+
+
