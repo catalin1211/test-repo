@@ -41,7 +41,10 @@ however, if your last commit was already pushed to the remote repo, after the am
 * conflicts when merging - committed changes
 
 if you have committed changes that have not been pushed upstream, and you try to fetch and merge changes that interfere you might need to resolve the conflict
-a merge commit will be created and added to the history, which you will then need to push upstream in order to bring your local copy and the remote in sync (with your aforementioned changes included)
+if the conflict cannot be solved automatically by git, "git merge" will notify you
+"git status" will show the file as unmerged and will tell you how you can mark it as resolved (after resolving it)
+resolve the conflict by manually editing the file, then use "git add" to mark it as resolved; finally the merge commit is now ready and can be added to the history
+you will then need to push upstream in order to bring your local copy and the remote in sync (with your aforementioned changes included)
 
 * how to see incoming changes from remote
 
